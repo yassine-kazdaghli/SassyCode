@@ -10891,6 +10891,7 @@ footer a {
   }
   .cards .card {
     width: 45vw !important;
+    flex: 1 !important;
   }
 }
 
