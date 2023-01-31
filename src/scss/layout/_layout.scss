@@ -1,7 +1,13 @@
+@import"../variables";
+@import"../variables/variables";
+
 nav {
+  ul{
+    justify-content: center;
   a {
     color: $primary-color;
-  }
+  }}
+  
 }
 
 header {
@@ -9,27 +15,108 @@ header {
   background-image: url('../../images/header.jpg');
   background-size: cover;
   text-align: center;
+  padding-top: 2rem;
+  font-weight: bolder;
+  h1 {
+    font-weight: 900;
+    width: 60%;
+    margin: 0 auto ;
+  }
+ 
 }
 
 .card {
   border-radius: 5px;
+  background-color: $secondary-color;
+ 
+  
+  
 
   .img {
     background-size: cover;
     height: $large;
     width: 100%;
     background-position: center;
+    
   }
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 main {
-  aside {
+  article h2{
+    font-weight: bolder;
   }
-}
+  
+ 
+ aside { 
+  padding: 1rem;
+  border: $border-color $border-size solid;
+  margin-bottom: 1rem;
+  h3{
+    font-weight: bolder;
+  }
+ }
+ }
 
 footer {
+  width: 100%;
+ 
+  li{
+    list-style: none;
+  }
   background-color: $primary-color;
   a {
     color: white;
+    
   }
+}
+@media (min-width: $tablet) {
+  nav {
+      ul{
+    justify-content: flex-end;
+    width: 100%
+  }
+}
+.card {
+  width: 80% !important;
+ 
+}
+main{
+  flex-flow: row ;
+  aside{
+    width: 25% !important ;
+  }
+  article{
+    width: 50% !important;
+  }
+}
+}
+@media screen and (min-width: $desktop) {
+ 
+ .cards{
+  flex-direction: row;
+  flex-flow: wrap ;
+  margin-bottom: 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  width: 100vw;
+ 
+.card{
+  width: 45vw !important;
+  
+}
+
+ }
+ 
+    
+
+
+  
 }
